@@ -1,4 +1,4 @@
-# Advanced-Tricks-for-Selenium-and-JUnit5
+# Advanced Tricks for Selenium and JUnit5
 
 1. Synchronizing for page refresh, back and stale element exception
 2. Full page screenshot
