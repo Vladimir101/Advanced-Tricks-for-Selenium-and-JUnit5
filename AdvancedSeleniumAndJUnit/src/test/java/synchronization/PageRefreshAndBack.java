@@ -30,7 +30,7 @@ class PageRefreshAndBack extends BaseTest
 		driver.navigate().refresh();
 
 		WebElement searchResults = 
-				driver.findElement(By.xpath("//div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));
+				driver.findElement(By.xpath("//div[1]/div[3]/div[1]/h2[1]"));
 		assertTrue(searchResults.getText().contains("results for “milk”"));
 
 		driver.navigate().back();
@@ -43,14 +43,14 @@ class PageRefreshAndBack extends BaseTest
 		WebElement searchField = driver.findElement(By.name("searchTerm"));
 		searchField.sendKeys("milk", Keys.ENTER);
 		
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		driver.navigate().refresh();
 		
 		Thread.sleep(4000);
 		WebElement searchResults = 
-				driver.findElement(By.xpath("//div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));
+				driver.findElement(By.xpath("//div[1]/div[3]/div[1]/h2[1]"));
 		assertTrue(searchResults.getText().contains("results for “milk”"));
-
+		
 		driver.navigate().back();
 		Thread.sleep(2000);
 		assertEquals(targetTitle, driver.getTitle());
@@ -70,7 +70,7 @@ class PageRefreshAndBack extends BaseTest
 
 // fix		
 		WebElement searchResults = 
-				sync.findElement(By.xpath("//div[1]/div[1]/div[2]/div[1]/div[1]/h2[1]"));
+				sync.findElement(By.xpath("//div[1]/div[3]/div[1]/h2[1]"));
 // =========================================		
 		assertTrue(searchResults.getText().contains("results for “milk”"));
 
