@@ -43,7 +43,7 @@ class PageRefreshAndBack extends BaseTest
 		WebElement searchField = driver.findElement(By.name("searchTerm"));
 		searchField.sendKeys("milk", Keys.ENTER);
 		
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		driver.navigate().refresh();
 		
 		Thread.sleep(4000);
